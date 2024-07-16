@@ -1,12 +1,10 @@
 <!--
  * @Date: 2024-07-05 17:04:11
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-07-10 23:43:26
- * @FilePath: \Vue3UI\src\App.vue
+ * @LastEditTime: 2024-07-16 20:27:29
+ * @FilePath: \ts\ui-vue3\src\App.vue
 -->
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import Demo from "./components/demo.tsx"
 </script>
 
 <template>
@@ -18,8 +16,7 @@ import Demo from "./components/demo.tsx"
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <!-- <HelloWorld msg="Vite + Vue" /> -->
-  <Demo />
+  <UButton></UButton>
 </template>
 
 <style scoped>

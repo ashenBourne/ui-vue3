@@ -1,8 +1,8 @@
 /*
  * @Date: 2024-07-05 17:43:33
- * @LastEditors: DESKTOP-J0NOHOA\Administrator 774779341@qq.com
- * @LastEditTime: 2024-07-05 17:43:41
- * @FilePath: \Vue3UI\.prettierrc.js
+ * @LastEditors: aliushen 774779341@qq.com
+ * @LastEditTime: 2024-07-16 20:31:40
+ * @FilePath: \ts\ui-vue3\.prettierrc.js
  */
 module.exports = {
     tabWidth: 2,

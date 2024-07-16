@@ -1,20 +1,21 @@
 /*
- * @Date: 2024-07-10 23:36:18
+ * @Date: 2024-07-16 19:56:00
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-07-13 17:44:12
- * @FilePath: \Vue3UI\src\components\demo.tsx
+ * @LastEditTime: 2024-07-16 20:26:09
+ * @FilePath: \ts\ui-vue3\src\components\button\Button.tsx
  */
+
 import {  defineComponent, toRefs } from "vue"
-import { buttonProps, ButtonProps } from "./button-type"
+import { buttonProps, ButtonProps } from "./types.ts"
 // import { getComponentCls } from "@vue3-ui/utils"
 
 export default defineComponent({
-  name: "UButton",
+  name: "u-button",
   props: buttonProps,
   setup(props: ButtonProps, { slots }) {
     const { disabled } = toRefs(props)
     return () => {
-      // const { tag } = props
+      const { tag } = props
       const defaultSlot = slots.default ? slots.default() : "按钮"
       return (
         <tag disabled={disabled.value}>
