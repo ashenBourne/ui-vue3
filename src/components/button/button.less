@@ -1,0 +1,241 @@
+:root,
+:host {
+  --zy-button-mini-height: 24px;
+  --zy-button-mini-padding: 0 var(--zy-padding-base);
+  --zy-button-mini-font-size: var(--zy-font-size-xs);
+  --zy-button-small-height: 32px;
+  --zy-button-small-padding: 0 var(--zy-padding-xs);
+  --zy-button-small-font-size: var(--zy-font-size-sm);
+  --zy-button-normal-padding: 0 15px;
+  --zy-button-normal-font-size: var(--zy-font-size-md);
+  --zy-button-large-height: 50px;
+  --zy-button-default-height: 44px;
+  --zy-button-default-line-height: 1.2;
+  --zy-button-default-font-size: var(--zy-font-size-lg);
+  --zy-button-default-color: var(--zy-text-color);
+  --zy-button-default-background: var(--zy-background-2);
+  --zy-button-default-border-color: var(--zy-gray-4);
+  --zy-button-primary-color: var(--zy-white);
+  --zy-button-primary-background: var(--zy-primary-color);
+  --zy-button-primary-border-color: var(--zy-primary-color);
+  --zy-button-success-color: var(--zy-white);
+  --zy-button-success-background: var(--zy-success-color);
+  --zy-button-success-border-color: var(--zy-success-color);
+  --zy-button-danger-color: var(--zy-white);
+  --zy-button-danger-background: var(--zy-danger-color);
+  --zy-button-danger-border-color: var(--zy-danger-color);
+  --zy-button-warning-color: var(--zy-white);
+  --zy-button-warning-background: var(--zy-warning-color);
+  --zy-button-warning-border-color: var(--zy-warning-color);
+  --zy-button-border-width: var(--zy-border-width);
+  --zy-button-radius: var(--zy-radius-md);
+  --zy-button-round-radius: var(--zy-radius-max);
+  --zy-button-plain-background: var(--zy-white);
+  --zy-button-disabled-opacity: var(--zy-disabled-opacity);
+  --zy-button-icon-size: 1.2em;
+  --zy-button-loading-icon-size: 20px;
+}
+
+.zy-theme-dark {
+  --zy-button-plain-background: transparent;
+}
+
+.zy-button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  height: var(--zy-button-default-height);
+  margin: 0;
+  padding: 12px 20px;
+  font-size: var(--zy-button-default-font-size);
+  line-height: var(--zy-button-default-line-height);
+  text-align: center;
+  border-radius: var(--zy-button-radius);
+  cursor: pointer;
+  transition: opacity var(--zy-duration-fast);
+  -webkit-appearance: none;
+  -webkit-font-smoothing: auto;
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: var(--zy-black);
+    border: inherit;
+    border-color: var(--zy-black);
+    border-radius: inherit; /* inherit parent's border radius */
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    content: ' ';
+  }
+
+  &:active::before {
+    opacity: 0.1;
+  }
+
+  &--loading,
+  &--disabled {
+    &::before {
+      display: none;
+    }
+  }
+
+  &--default {
+    color: var(--zy-button-default-color);
+    background: var(--zy-button-default-background);
+    border: var(--zy-button-border-width) solid
+      var(--zy-button-default-border-color);
+  }
+
+  &--primary {
+    color: var(--zy-button-primary-color);
+    background: var(--zy-button-primary-background);
+    border: var(--zy-button-border-width) solid
+      var(--zy-button-primary-border-color);
+  }
+
+  &--success {
+    color: var(--zy-button-success-color);
+    background: var(--zy-button-success-background);
+    border: var(--zy-button-border-width) solid
+      var(--zy-button-success-border-color);
+  }
+
+  &--danger {
+    color: var(--zy-button-danger-color);
+    background: var(--zy-button-danger-background);
+    border: var(--zy-button-border-width) solid
+      var(--zy-button-danger-border-color);
+  }
+
+  &--warning {
+    color: var(--zy-button-warning-color);
+    background: var(--zy-button-warning-background);
+    border: var(--zy-button-border-width) solid
+      var(--zy-button-warning-border-color);
+  }
+
+  &--plain {
+    background: var(--zy-button-plain-background);
+
+    &.zy-button--primary {
+      color: var(--zy-button-primary-background);
+    }
+
+    &.zy-button--success {
+      color: var(--zy-button-success-background);
+    }
+
+    &.zy-button--danger {
+      color: var(--zy-button-danger-background);
+    }
+
+    &.zy-button--warning {
+      color: var(--zy-button-warning-background);
+    }
+  }
+
+  &--large {
+    width: 100%;
+    height: var(--zy-button-large-height);
+  }
+
+  &--normal {
+    padding: var(--zy-button-normal-padding);
+    font-size: var(--zy-button-normal-font-size);
+  }
+
+  &--small {
+    height: var(--zy-button-small-height);
+    padding: var(--zy-button-small-padding);
+    font-size: var(--zy-button-small-font-size);
+  }
+
+  &__loading {
+    color: inherit;
+    font-size: inherit;
+
+    .zy-loading__spinner {
+      color: currentColor;
+      width: var(--zy-button-loading-icon-size);
+      height: var(--zy-button-loading-icon-size);
+    }
+  }
+
+  &--mini {
+    height: var(--zy-button-mini-height);
+    padding: var(--zy-button-mini-padding);
+    font-size: var(--zy-button-mini-font-size);
+
+    & + .zy-button--mini {
+      margin-left: var(--zy-padding-base);
+    }
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: var(--zy-button-disabled-opacity);
+  }
+
+  &--loading {
+    cursor: default;
+  }
+
+  &--round {
+    border-radius: var(--zy-button-round-radius);
+  }
+
+  &--square {
+    border-radius: 0;
+  }
+
+  // align-items are ignored when flex container is a button in legacy safari
+  // see: https://bugs.webkit.org/show_bug.cgi?id=169700
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    // fix icon vertical align
+    &::before {
+      content: ' ';
+    }
+  }
+
+  &__icon {
+    font-size: var(--zy-button-icon-size);
+    line-height: inherit;
+  }
+
+  &__icon + &__text,
+  &__loading + &__text,
+  &__text + &__icon,
+  &__text + &__loading {
+    margin-left: var(--zy-padding-base);
+  }
+
+  &--hairline {
+    border-width: 0;
+
+    &::after {
+      border-color: inherit;
+      border-radius: calc(var(--zy-button-radius) * 2);
+    }
+
+    &.zy-button--round::after {
+      border-radius: var(--zy-button-round-radius);
+    }
+
+    &.zy-button--square::after {
+      border-radius: 0;
+    }
+  }
+}

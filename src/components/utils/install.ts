@@ -1,8 +1,8 @@
 /*
  * @Date: 2024-07-16 20:04:01
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-07-16 20:24:49
- * @FilePath: \ts\ui-vue3\src\components\utils\install.ts
+ * @LastEditTime: 2024-07-29 16:28:17
+ * @FilePath: \UIPackage\ts\ui-vue3\src\components\utils\install.ts
  */
 import { camelize } from './format';
 
@@ -21,7 +21,6 @@ export type WithInstall<T> = T & {
 } & EventShim;
 
 export function withInstall<T extends Component>(options: T) {
-  // TS语法：意思是options作为断言对象，key是string类型，value未知
   (options as Record<string, unknown>).install = (app: App) => {
     const { name } = options;
     if (name) {

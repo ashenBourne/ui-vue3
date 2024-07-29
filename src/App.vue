@@ -1,22 +1,17 @@
 <!--
  * @Date: 2024-07-05 17:04:11
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-07-16 20:27:29
- * @FilePath: \ts\ui-vue3\src\App.vue
+ * @LastEditTime: 2024-07-29 16:26:28
+ * @FilePath: \UIPackage\ts\ui-vue3\src\App.vue
 -->
+
 <script setup lang="ts">
 </script>
 
 <template>
   <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+    <!-- <ZYButton></ZYButton> -->
   </div>
-  <UButton></UButton>
 </template>
 
 <style scoped>
