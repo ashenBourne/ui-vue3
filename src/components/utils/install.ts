@@ -1,8 +1,8 @@
 /*
  * @Date: 2024-07-16 20:04:01
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-07-29 16:28:17
- * @FilePath: \UIPackage\ts\ui-vue3\src\components\utils\install.ts
+ * @LastEditTime: 2024-07-31 11:42:55
+ * @FilePath: \ts\ui-vue3\src\components\utils\install.ts
  */
 import { camelize } from './format';
 
@@ -26,7 +26,6 @@ export function withInstall<T extends Component>(options: T) {
     if (name) {
       app.component(name, options);
       // camelize作用是将-变为大驼峰，比如-button==>Button
-      console.log(camelize(`-${name}`))
       app.component(camelize(`-${name}`), options);
     }
   };
