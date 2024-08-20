@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-08-19 21:30:21
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-08-20 18:31:52
+ * @LastEditTime: 2024-08-20 20:36:53
  * @FilePath: \ui-vue3\src\components\script\build\index.ts
  */
 import delPath from '../utils/delpath';
@@ -18,18 +18,16 @@ export const removeDist = () => {
 
 //打包样式
 export const buildStyle = () => {
-  return src([`${componentPath}/style/**.less`])
+  return src([`${componentPath}/style/**.less`,`${componentPath}/style/**/**.less`])
     .pipe(less())
     .pipe(autoprefixer())
-    .pipe(dest(`${pkgPath}/zy-ui/lib/src`))
-    .pipe(dest(`${pkgPath}/zy-ui/es/src`));
+    .pipe(dest(`${pkgPath}/zy-ui/lib/style`))
+    .pipe(dest(`${pkgPath}/zy-ui/es/style`));
 };
 
 //打包组件
 export const buildComponent = async () => {
-  console.log("执行打包组件")
   run('pnpm run build', componentPath);
-  console.log("打包结束")
 };
 export default series(
   async () => removeDist(),
