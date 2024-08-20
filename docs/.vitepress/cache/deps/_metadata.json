@@ -1,37 +1,37 @@
 {
-  "hash": "1aba8cbd",
-  "configHash": "b258b38f",
-  "lockfileHash": "2799c36e",
-  "browserHash": "300ce785",
+  "hash": "3111339c",
+  "configHash": "8ddf7480",
+  "lockfileHash": "a0c3c890",
+  "browserHash": "e50b2f5c",
   "optimized": {
     "vue": {
-      "src": "../../../../node_modules/.pnpm/vue@3.4.31_typescript@5.4.5/node_modules/vue/dist/vue.runtime.esm-bundler.js",
+      "src": "../../../../node_modules/.pnpm/vue@3.4.31_typescript@4.9.5/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "a77b90da",
+      "fileHash": "b792a3ee",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
-      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.3.7/node_modules/@vue/devtools-api/dist/index.js",
+      "src": "../../../../node_modules/.pnpm/@vue+devtools-api@7.3.8/node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "5577488d",
+      "fileHash": "0213663a",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
-      "src": "../../../../node_modules/.pnpm/@vueuse+core@10.11.0_vue@3.4.31_typescript@5.4.5_/node_modules/@vueuse/core/index.mjs",
+      "src": "../../../../node_modules/.pnpm/@vueuse+core@11.0.1_vue@3.4.38_typescript@4.9.5_/node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "80047bfe",
+      "fileHash": "5f9e8f57",
       "needsInterop": false
     },
     "@vitepress-demo-preview/component": {
-      "src": "../../../../node_modules/.pnpm/@vitepress-demo-preview+component@2.3.2_vitepress@1.3.1_@algolia+client-search@4.24.0_@types+_3gg6aja3ujxncuhixflxuiqlse/node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
+      "src": "../../../../node_modules/.pnpm/@vitepress-demo-preview+component@2.3.2_vitepress@1.3.3_@algolia+client-search@4.24.0_@types+_sym47pbmloiwqswozqml74r5ny/node_modules/@vitepress-demo-preview/component/dist/preview-component.js",
       "file": "@vitepress-demo-preview_component.js",
-      "fileHash": "2022f496",
+      "fileHash": "fb7e2605",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-HYXYL37C": {
-      "file": "chunk-HYXYL37C.js"
+    "chunk-LSXJXCG2": {
+      "file": "chunk-LSXJXCG2.js"
     }
   }
 }

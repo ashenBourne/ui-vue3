@@ -1,8 +1,8 @@
 /*
  * @Date: 2024-08-19 21:30:21
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-08-20 16:25:36
- * @FilePath: \UIPackage\ts\ui-vue3\src\components\script\build\index.ts
+ * @LastEditTime: 2024-08-20 18:31:52
+ * @FilePath: \ui-vue3\src\components\script\build\index.ts
  */
 import delPath from '../utils/delpath';
 import { series, parallel, src, dest } from 'gulp';
@@ -18,7 +18,7 @@ export const removeDist = () => {
 
 //打包样式
 export const buildStyle = () => {
-  return src(`${componentPath}/src/**.less`)
+  return src([`${componentPath}/style/**.less`])
     .pipe(less())
     .pipe(autoprefixer())
     .pipe(dest(`${pkgPath}/zy-ui/lib/src`))

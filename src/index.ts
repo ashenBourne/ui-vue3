@@ -4,7 +4,7 @@
  * @LastEditTime: 2024-08-19 11:13:12
  * @FilePath: \UIPackage\ts\ui-vue3\src\index.ts
  */
-import * as components from './components/index';
+import * as components from './components/src/index';
 export default {
   install: (app: App) => {
     for (const c in components) {

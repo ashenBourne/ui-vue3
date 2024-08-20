@@ -7,7 +7,7 @@
 
 import {  defineComponent } from "vue"
 import { buttonProps, ButtonProps } from "./types"
-import { createNamespace } from "../utils/create"
+import { createNamespace } from "../../utils/create"
 const [name, bem] = createNamespace('button');
 
 export default defineComponent({

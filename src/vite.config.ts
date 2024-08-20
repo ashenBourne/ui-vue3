@@ -1,8 +1,8 @@
 /*
  * @Date: 2024-08-01 18:28:26
  * @LastEditors: aliushen 774779341@qq.com
- * @LastEditTime: 2024-08-20 10:45:06
- * @FilePath: \ts\ui-vue3\src\vite.config.ts
+ * @LastEditTime: 2024-08-20 18:15:35
+ * @FilePath: \ui-vue3\src\vite.config.ts
  */
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
@@ -54,7 +54,7 @@ export default defineConfig({
       entryRoot: 'src',
       outputDir: ['../zy-ui/es/src', '../zy-ui/lib/src'],
       //指定使用的tsconfig.json为我们整个项目根目录下,如果不配置,你也可以在components下新建tsconfig.json
-      tsConfigFilePath: '../../tsconfig.json'
+      tsConfigFilePath: '../tsconfig.json'
     }),
     DefineOptions(),
     {
