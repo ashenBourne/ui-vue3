@@ -1,0 +1,16 @@
+{
+    "name": "@zy-ui/components",
+    "version": "1.0.0",
+    "description": "UI库",
+    "main": "./index.ts",
+    "scripts": {
+      "build": "vite build",
+      "test": "vitest"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    
+    "devDependencies": {
+    }
+  }
